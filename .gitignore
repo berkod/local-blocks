@@ -1,0 +1,41 @@
+# WordPress core — installed by ddev, never edited, never committed.
+/index.php
+/license.txt
+/readme.html
+/wp-activate.php
+/wp-admin/
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-config.php
+/wp-config-ddev.php
+/wp-config-sample.php
+/wp-cron.php
+/wp-includes/
+/wp-links-opml.php
+/wp-load.php
+/wp-login.php
+/wp-mail.php
+/wp-settings.php
+/wp-signup.php
+/wp-trackback.php
+/xmlrpc.php
+
+# ddev
+/.ddev/
+
+# Editor
+.vscode/
+.DS_Store
+
+# wp-content: ignore everything, then un-ignore only what we author.
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/recipe-block-theme/
+!/wp-content/plugins/
+/wp-content/plugins/*
+!/wp-content/plugins/recipe-blocks/
+
+# Build output inside our own code
+node_modules/
+build/

@@ -41,8 +41,9 @@ Theme decision deferred to S4: scaffold via `npx @wordpress/create-block-theme` 
 ## Week 2 — FSE + theme.json
 
 ### S4. Block theme anatomy.
-- Scaffold theme: `npx @wordpress/create-block-theme`. Walk file tree.
-- `templates/`, `parts/`, `patterns/`, `theme.json`, `style.css`, `functions.php` (slim)
+- Scaffold theme manually: `style.css` (header comment only) + `theme.json` (bare schema) + empty `index.php` (required by WP to recognize the theme, never used) + empty `templates/`, `parts/`, `patterns/` dirs. No npm tool needed.
+- Note: `@wordpress/create-block-theme` does not exist as an npx package; the "Create Block Theme" plugin exists but manual scaffolding is better for learning the minimal required structure.
+- `templates/`, `parts/`, `patterns/`, `theme.json`, `style.css`, `index.php` — no `functions.php` needed for a minimal block theme
 - Compare: classic theme tree vs block theme tree
 - **Deliverable:** theme installed, activated on ddev site.
 
