@@ -1,6 +1,143 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"settings": {},
-	"styles": {}
+
+	"settings": {
+		"appearanceTools": true,
+		"useRootPaddingAwareAlignments": true,
+
+		"layout": {
+			"contentSize": "640px",
+			"wideSize": "1200px"
+		},
+
+		"color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"custom": true,
+			"palette": [
+				{ "slug": "base",     "color": "#fdf8f0", "name": "Cream" },
+				{ "slug": "contrast", "color": "#1f1a17", "name": "Cocoa" },
+				{ "slug": "primary",  "color": "#c2410c", "name": "Paprika" },
+				{ "slug": "secondary","color": "#4d7c0f", "name": "Herb" },
+				{ "slug": "accent",   "color": "#eaddc7", "name": "Oat" }
+			]
+		},
+
+		"typography": {
+			"fluid": true,
+			"defaultFontSizes": false,
+			"fontFamilies": [
+				{
+					"slug": "heading",
+					"name": "Heading",
+					"fontFamily": "Georgia, 'Iowan Old Style', 'Times New Roman', serif"
+				},
+				{
+					"slug": "body",
+					"name": "Body",
+					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+				}
+			],
+			"fontSizes": [
+				{ "slug": "small",  "name": "Small",  "size": "0.9rem" },
+				{ "slug": "medium", "name": "Medium", "size": "1.05rem" },
+				{
+					"slug": "large", "name": "Large", "size": "1.5rem",
+					"fluid": { "min": "1.3rem", "max": "1.75rem" }
+				},
+				{
+					"slug": "x-large", "name": "Extra Large", "size": "2.5rem",
+					"fluid": { "min": "2rem", "max": "3.25rem" }
+				}
+			]
+		},
+
+		"spacing": {
+			"defaultSpacingSizes": false,
+			"units": [ "px", "em", "rem", "vh", "vw", "%" ],
+			"spacingSizes": [
+				{ "slug": "20", "name": "1", "size": "0.5rem" },
+				{ "slug": "30", "name": "2", "size": "1rem" },
+				{ "slug": "40", "name": "3", "size": "1.5rem" },
+				{ "slug": "50", "name": "4", "size": "2.5rem" },
+				{ "slug": "60", "name": "5", "size": "4rem" },
+				{ "slug": "70", "name": "6", "size": "6rem" }
+			]
+		},
+
+		"blocks": {
+			"core/quote": {
+				"color": {
+					"palette": [
+						{ "slug": "base",     "color": "#fdf8f0", "name": "Cream" },
+						{ "slug": "accent",   "color": "#eaddc7", "name": "Oat" },
+						{ "slug": "contrast", "color": "#1f1a17", "name": "Cocoa" }
+					]
+				}
+			}
+		}
+	},
+
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--contrast)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--body)",
+			"fontSize": "var(--wp--preset--font-size--medium)",
+			"lineHeight": "1.6"
+		},
+		"spacing": {
+			"blockGap": "var(--wp--preset--spacing--40)",
+			"padding": {
+				"top": "var(--wp--preset--spacing--50)",
+				"bottom": "var(--wp--preset--spacing--50)",
+				"left": "var(--wp--preset--spacing--40)",
+				"right": "var(--wp--preset--spacing--40)"
+			}
+		},
+
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontWeight": "600",
+					"lineHeight": "1.2"
+				}
+			},
+			"h1": { "typography": { "fontSize": "var(--wp--preset--font-size--x-large)" } },
+			"h2": { "typography": { "fontSize": "var(--wp--preset--font-size--large)" } },
+			"link": {
+				"color": { "text": "var(--wp--preset--color--primary)" },
+				"typography": { "textDecoration": "underline" },
+				":hover": {
+					"color": { "text": "var(--wp--preset--color--secondary)" }
+				}
+			}
+		},
+
+		"blocks": {
+			"core/post-date": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"textTransform": "uppercase",
+					"letterSpacing": "0.08em"
+				},
+				"color": { "text": "var(--wp--preset--color--secondary)" }
+			},
+			"core/quote": {
+				"color": { "background": "var(--wp--preset--color--accent)" },
+				"spacing": {
+					"padding": {
+						"top": "var(--wp--preset--spacing--40)",
+						"bottom": "var(--wp--preset--spacing--40)",
+						"left": "var(--wp--preset--spacing--40)",
+						"right": "var(--wp--preset--spacing--40)"
+					}
+				}
+			}
+		}
+	}
 }
