@@ -19,4 +19,4 @@ I was confused a bit because the admin toolbar describes each layout differently
 
 How straightforward the nesting and mark up are once I got past the confusion about the terminology differences between the visual editor and the code (group with a layout of flex in the code and it being ROW in the visual)
 
-This seems to be a common patter:  the editor uses friendly names (Row, Stack, Grid, Cover) but the serialized markup uses fewer, more generic block types.
+This seems to be a common pattern:  the editor uses friendly names (Row, Stack, Grid, Cover) but the serialized markup uses fewer, more generic block types.
